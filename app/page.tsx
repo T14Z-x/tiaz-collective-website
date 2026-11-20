@@ -833,7 +833,7 @@ export default function Home() {
       }
     }
     if (field === "message" && values.message.trim().length < 5) {
-      return "Please share a few words about your project or shoot.";
+      return "Please write a few words before sending.";
     }
     if (field === "consent" && !values.consent) {
       return "Please agree to the privacy note before sending.";
@@ -1179,9 +1179,8 @@ export default function Home() {
             human moments.
           </p>
           <p>
-            Available for commissioned shoots, visual storytelling, and
-            creative collaborations—bringing a calm, cinematic eye from the
-            first scout to the final grade.
+            This space is simply a personal archive—a quiet place to gather the
+            frames, short reels, and small moments I’ve collected along the way.
           </p>
           <a className="text-link" href="#work">
             Explore selected work <ArrowUpRight />
@@ -1314,8 +1313,8 @@ export default function Home() {
               </div>
               <a
                 className="round-link magnetic-btn"
-                href="#contact"
-                aria-label={`Inquire about ${service.name}`}
+                href="#work"
+                aria-label={`View ${service.name} in selected work`}
                 onMouseMove={handleMagneticMove}
                 onMouseLeave={handleMagneticLeave}
               >
@@ -1441,7 +1440,7 @@ export default function Home() {
           onMouseMove={handleMagneticMove}
           onMouseLeave={handleMagneticLeave}
         >
-          Book a shoot or collaboration <ArrowUpRight />
+          Leave a note or say hello <ArrowUpRight />
         </a>
       </section>
 
@@ -1480,7 +1479,7 @@ export default function Home() {
           ))}
           <div className="people-footnote" data-reveal="up">
             <PlusMinusIcon open={false} />
-            <p>Available for travel commissions, editorial photography,<br />and short-form visual direction worldwide.</p>
+            <p>An ongoing personal archive of roads, weather, and quiet places—<br />updated whenever the light asks for a frame.</p>
           </div>
         </div>
       </section>
@@ -1540,11 +1539,12 @@ export default function Home() {
         <div className="contact-heading" data-reveal="left">
           <span className="section-index">08 — Say hello</span>
           <p className="eyebrow">Contact</p>
-          <h2>Let’s make<br /><em>something visual.</em></h2>
+          <h2>Say hello,<br /><em>pass through.</em></h2>
           <p className="jp-line">言葉になる前に。</p>
           <p className="contact-blurb">
-            Looking for stills, a short film, or a visual collaborator? Share a
-            few lines about your idea and let’s talk.
+            This is just a personal visual showcase. If a frame caught your eye,
+            you want to talk photography, or you’re simply passing by—feel free
+            to leave a note.
           </p>
           <a className="contact-email" href="mailto:hello@tiaz-portfolio.example">
             hello@tiaz-portfolio.example <ArrowUpRight />
@@ -1615,7 +1615,7 @@ export default function Home() {
           </label>
 
           <label htmlFor="contact-message">
-            <span>Tell me about your shoot or idea <i>*</i></span>
+            <span>Leave a note <i>*</i></span>
             <textarea
               id="contact-message"
               name="message"
@@ -1736,7 +1736,7 @@ export default function Home() {
 
         <div className="footer-top">
           <a className="footer-brand" href="#home"><BrandMark /><span>tiaz<br />visuals</span></a>
-          <div className="footer-note"><p>Stills &amp; motion.<br />Captured in natural light.</p><span>Available for commissions everywhere</span></div>
+          <div className="footer-note"><p>Stills &amp; motion.<br />Captured in natural light.</p><span>Personal visual archive</span></div>
           <div className="footer-links">
             <div><span>Explore</span><a href="#about">About</a><a href="#services">Craft</a><a href="#work">Selected work</a><a href="#people">Behind the lens</a></div>
             <div>
@@ -1915,7 +1915,7 @@ export default function Home() {
                   className="drawer-cta"
                   onClick={jumpToContactFromDrawer}
                 >
-                  Inquire about prints or a shoot <ArrowUpRight />
+                  Say hello or share a thought <ArrowUpRight />
                 </button>
               </div>
             )}

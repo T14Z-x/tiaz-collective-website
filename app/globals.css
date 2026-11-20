@@ -7,8 +7,8 @@
   --deep-green: #315336;
   --lime: #d3eb91;
   --focus: #5a7538;
-  --serif: var(--font-serif), "GFS Didot", "Times New Roman", serif;
-  --sans: var(--font-sans), "DM Sans", "Hiragino Kaku Gothic ProN", sans-serif;
+  --serif: var(--font-serif), "Instrument Serif", Georgia, serif;
+  --sans: var(--font-sans), "Plus Jakarta Sans", sans-serif;
   --jp: var(--font-jp), "Shippori Mincho", "Hiragino Mincho ProN", serif;
 }
 
@@ -179,8 +179,8 @@ textarea:focus-visible {
 .emblem-ring .brand-mark { width: 85px; height: 85px; stroke-width: .65; opacity: .82; }
 .emblem-type { margin-top: 18px; font-family: var(--serif); font-size: 38px; line-height: .8; letter-spacing: -.05em; }
 .hero-kicker { margin: 27px 0 10px; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; opacity: .88; }
-.hero h1 { margin: 0; font-family: var(--serif); font-size: clamp(56px, 8.5vw, 106px); font-weight: 400; line-height: .94; letter-spacing: -.055em; }
-.hero h1 em { font-weight: 400; }
+.hero h1 { margin: 0; font-family: var(--serif); font-size: clamp(64px, 9.2vw, 118px); font-weight: 400; line-height: .9; letter-spacing: -.02em; }
+.hero h1 em { font-style: italic; font-weight: 400; }
 .split-headline .split-line { display: block; overflow: hidden; padding-bottom: 4px; }
 .split-headline .split-line > span,
 .split-headline .split-line > em {
@@ -247,8 +247,8 @@ textarea:focus-visible {
 .philosophy > .section-index { position: relative; z-index: 2; color: rgba(247, 247, 242, .78); }
 .philosophy-content { position: sticky; top: 20svh; z-index: 2; max-width: 750px; margin: 90px auto 0; text-align: center; }
 .philosophy-content .eyebrow { color: rgba(247, 247, 242, .8); }
-.philosophy-content h2, .intro-heading h2, .approach h2, .section-heading h2, .people-heading h2, .contact h2 { margin: 0; font-family: var(--serif); font-size: clamp(44px, 6vw, 72px); font-weight: 400; letter-spacing: -.045em; line-height: 1.03; text-wrap: balance; }
-.philosophy-content h2 em, .intro-heading h2 em, .approach h2 em, .section-heading h2 em, .people-heading h2 em, .contact h2 em { color: #5d6452; font-weight: 400; }
+.philosophy-content h2, .intro-heading h2, .approach h2, .section-heading h2, .people-heading h2, .contact h2 { margin: 0; font-family: var(--serif); font-size: clamp(48px, 6.4vw, 78px); font-weight: 400; letter-spacing: -.02em; line-height: .98; text-wrap: balance; }
+.philosophy-content h2 em, .intro-heading h2 em, .approach h2 em, .section-heading h2 em, .people-heading h2 em, .contact h2 em { font-style: italic; color: #5d6452; font-weight: 400; }
 .philosophy-content h2 em { color: #d3eb91; }
 .philosophy-copy { max-width: 480px; margin: 28px auto 0; color: rgba(247, 247, 242, .9); font-size: 15px; line-height: 1.8; }
 .jp-line { font-family: var(--jp); color: #3f4638; font-size: 14px; letter-spacing: .08em; }
@@ -316,11 +316,13 @@ textarea:focus-visible {
   height: 100%;
   object-fit: cover;
   object-position: center 54%;
+  opacity: .72;
+  filter: saturate(.84) contrast(1.06);
 }
 .approach-bg-scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(12, 16, 14, .28) 0%, rgba(12, 16, 14, .22) 50%, rgba(12, 16, 14, .42) 100%);
+  background: linear-gradient(180deg, rgba(20, 34, 24, .52) 0%, rgba(22, 38, 26, .4) 50%, rgba(18, 30, 21, .68) 100%);
 }
 .approach-intro, .approach-note { position: relative; z-index: 2; }
 .approach-intro .section-index, .approach-intro .eyebrow { color: rgba(247, 247, 242, .85); }
@@ -345,12 +347,13 @@ textarea:focus-visible {
   height: 100%;
   object-fit: cover;
   object-position: center 58%;
-  opacity: 1;
+  opacity: .56;
+  filter: saturate(.82) contrast(1.06);
 }
 .process-bg-scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, .18) 0%, rgba(0, 0, 0, .12) 48%, rgba(0, 0, 0, .34) 100%);
+  background: linear-gradient(180deg, rgba(24, 38, 27, .64) 0%, rgba(26, 42, 30, .48) 50%, rgba(20, 31, 22, .74) 100%);
 }
 .process-title, .process-steps { position: relative; z-index: 2; }
 .process-title .eyebrow { color: rgba(255, 255, 255, .9); text-shadow: 0 1px 10px rgba(0, 0, 0, .35); }

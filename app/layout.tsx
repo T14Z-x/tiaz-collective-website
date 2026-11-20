@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
-import { DM_Sans, GFS_Didot, Shippori_Mincho } from "next/font/google";
+import {
+  Instrument_Serif,
+  Plus_Jakarta_Sans,
+  Shippori_Mincho,
+} from "next/font/google";
 import "./globals.css";
 
-const gfsDidot = GFS_Didot({
+const instrumentSerif = Instrument_Serif({
   weight: "400",
-  subsets: ["greek"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
   variable: "--font-serif",
   display: "swap",
 });
 
-const dmSans = DM_Sans({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
@@ -42,7 +47,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${gfsDidot.variable} ${dmSans.variable} ${shipporiMincho.variable}`}
+      className={`${instrumentSerif.variable} ${plusJakartaSans.variable} ${shipporiMincho.variable}`}
     >
       <body>{children}</body>
     </html>
