@@ -9,9 +9,12 @@ import {
   useState,
 } from "react";
 
-const HERO_VIDEO = "/images/lv_7366645607231933703_20241113011715.MP4";
-const APPROACH_VIDEO = "/images/approach-boat-web.mp4";
-const PROCESS_VIDEO = "/images/process-horses-web.mp4";
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const asset = (path: string) => `${BASE_PATH}${path}`;
+
+const HERO_VIDEO = asset("/images/lv_7366645607231933703_20241113011715.MP4");
+const APPROACH_VIDEO = asset("/images/approach-boat-web.mp4");
+const PROCESS_VIDEO = asset("/images/process-horses-web.mp4");
 
 const services = [
   {
@@ -22,7 +25,7 @@ const services = [
       "Quiet frames shaped by natural light—from misty highland roads and rocky coastlines to late-night fog.",
     tags: ["Landscape", "Street", "Nocturne"],
     art: "foundation-art",
-    image: "/images/IMG_2780.JPG",
+    image: asset("/images/IMG_2780.JPG"),
     frame: "frame-portrait",
     objectPosition: "50% 48%",
   },
@@ -34,7 +37,7 @@ const services = [
       "Atmospheric visual reels and short-form films cut with unhurried rhythm, sound texture, and presence.",
     tags: ["Direction", "Short Film", "Reels"],
     art: "identity-art",
-    image: "/images/IMG_8501.jpg",
+    image: asset("/images/IMG_8501.jpg"),
     frame: "frame-portrait",
     objectPosition: "50% 62%",
   },
@@ -46,7 +49,7 @@ const services = [
       "Sequencing, color grading, and editorial storytelling that turn scattered journeys into cohesive bodies of work.",
     tags: ["Color Grade", "Sequencing", "Editorial"],
     art: "experience-art",
-    image: "/images/IMG_1590.jpg",
+    image: asset("/images/IMG_1590.jpg"),
     frame: "frame-landscape",
     objectPosition: "50% 55%",
   },
@@ -80,7 +83,7 @@ const projects: ProjectItem[] = [
     discipline: "Motion Reel · Road Photography",
     category: "Motion",
     art: "project-botanics",
-    image: "/images/IMG_8503.JPG",
+    image: asset("/images/IMG_8503.JPG"),
     frame: "frame-portrait",
     objectPosition: "50% 72%",
     video: HERO_VIDEO,
@@ -91,9 +94,9 @@ const projects: ProjectItem[] = [
       "A short visual film and companion photo sequence exploring solitude, speed, and the quiet stops between towns.",
     deliverables: ["Short Film", "Road Stills", "Color Grading", "Sound Design"],
     gallery: [
-      { src: "/images/IMG_8503.JPG", caption: "Pause along the highland ridge" },
-      { src: "/images/IMG_8501.jpg", caption: "Tree-lined avenue before the climb" },
-      { src: "/images/IMG_5442.JPG", caption: "Panning study in motion" },
+      { src: asset("/images/IMG_8503.JPG"), caption: "Pause along the highland ridge" },
+      { src: asset("/images/IMG_8501.jpg"), caption: "Tree-lined avenue before the climb" },
+      { src: asset("/images/IMG_5442.JPG"), caption: "Panning study in motion" },
     ],
   },
   {
@@ -102,7 +105,7 @@ const projects: ProjectItem[] = [
     discipline: "Nocturne · Atmosphere · Stills",
     category: "Nocturne",
     art: "project-still",
-    image: "/images/IMG_4104.jpg",
+    image: asset("/images/IMG_4104.jpg"),
     frame: "frame-portrait",
     objectPosition: "50% 70%",
     year: "2025",
@@ -112,9 +115,9 @@ const projects: ProjectItem[] = [
       "An intimate night series focused on warmth against darkness, grain, and quiet human silhouettes.",
     deliverables: ["Night Photography", "Available Light", "Editorial Sequence"],
     gallery: [
-      { src: "/images/IMG_4104.jpg", caption: "Warmth by the roadside fire in winter mist" },
-      { src: "/images/IMG_4111.JPG", caption: "Streetlamps fading into dense fog" },
-      { src: "/images/IMG_2780.JPG", caption: "First star over dusk clouds" },
+      { src: asset("/images/IMG_4104.jpg"), caption: "Warmth by the roadside fire in winter mist" },
+      { src: asset("/images/IMG_4111.JPG"), caption: "Streetlamps fading into dense fog" },
+      { src: asset("/images/IMG_2780.JPG"), caption: "First star over dusk clouds" },
     ],
   },
   {
@@ -123,7 +126,7 @@ const projects: ProjectItem[] = [
     discipline: "Editorial · Nature · Composition",
     category: "Landscape",
     art: "project-ground",
-    image: "/images/IMG_2494.JPG",
+    image: asset("/images/IMG_2494.JPG"),
     frame: "frame-portrait",
     objectPosition: "50% 52%",
     year: "2024",
@@ -133,9 +136,9 @@ const projects: ProjectItem[] = [
       "A calm photographic essay balancing turquoise water, lush canopy silhouettes, and open horizons.",
     deliverables: ["Landscape", "Framing Study", "Print Series"],
     gallery: [
-      { src: "/images/IMG_2494.JPG", caption: "Wooden boat framed by riverside branches" },
-      { src: "/images/20241015_072016 (2).JPG", caption: "Footpath curving beside the river" },
-      { src: "/images/IMG_6567.JPG", caption: "Wide clouds reflected over calm water" },
+      { src: asset("/images/IMG_2494.JPG"), caption: "Wooden boat framed by riverside branches" },
+      { src: asset("/images/20241015_072016 (2).JPG"), caption: "Footpath curving beside the river" },
+      { src: asset("/images/IMG_6567.JPG"), caption: "Wide clouds reflected over calm water" },
     ],
   },
   {
@@ -144,7 +147,7 @@ const projects: ProjectItem[] = [
     discipline: "Travel · Landscape · Light",
     category: "Landscape",
     art: "project-fieldnotes",
-    image: "/images/IMG_8250.JPG",
+    image: asset("/images/IMG_8250.JPG"),
     frame: "frame-landscape",
     objectPosition: "50% 52%",
     year: "2024",
@@ -154,9 +157,9 @@ const projects: ProjectItem[] = [
       "Wide-format landscape frames celebrating scale, weather, and the deep greens of the hills.",
     deliverables: ["Travel Essay", "Wide Landscapes", "Color Palette"],
     gallery: [
-      { src: "/images/IMG_8250.JPG", caption: "Valley river winding beneath cloud cover" },
-      { src: "/images/IMG_8504.JPG", caption: "Red-roofed shelter on the crest" },
-      { src: "/images/IMG_8239 2.JPG", caption: "Mountain pass under building clouds" },
+      { src: asset("/images/IMG_8250.JPG"), caption: "Valley river winding beneath cloud cover" },
+      { src: asset("/images/IMG_8504.JPG"), caption: "Red-roofed shelter on the crest" },
+      { src: asset("/images/IMG_8239 2.JPG"), caption: "Mountain pass under building clouds" },
     ],
   },
 ];
@@ -166,7 +169,7 @@ const soloFrames = [
     role: "Behind the lens / Solo",
     name: "Walking into the quiet",
     bio: "Photographer & visual filmmaker documenting quiet roads, shifting weather, and everyday stillness.",
-    image: "/images/IMG_5959.jpg",
+    image: asset("/images/IMG_5959.jpg"),
     className: "person-founder",
     portraitClass: "portrait-founder",
   },
@@ -174,7 +177,7 @@ const soloFrames = [
     role: "On the road / Motion",
     name: "Chasing light between places",
     bio: "Most of my favorite frames happen five minutes after I stop rushing and let the scene settle.",
-    image: "/images/IMG_5442.JPG",
+    image: asset("/images/IMG_5442.JPG"),
     className: "person-member",
     portraitClass: "portrait-digital",
   },
@@ -188,7 +191,7 @@ const journal = [
     title: "Why fog is my favorite lens filter",
     summary: "How mist strips away distraction and turns a single lamp into a whole story.",
     color: "note-peach",
-    image: "/images/IMG_4111.JPG",
+    image: asset("/images/IMG_4111.JPG"),
     body: [
       "Clear daylight shows everything at once, which can make a frame feel crowded before you even press the shutter.",
       "Fog does the editing for you. It softens the background, catches every beam of light, and leaves only the essential silhouettes standing.",
@@ -202,7 +205,7 @@ const journal = [
     title: "Cutting motion like a photograph",
     summary: "Holding a shot two seconds longer than feels comfortable.",
     color: "note-blue",
-    image: "/images/IMG_8239 2.JPG",
+    image: asset("/images/IMG_8239 2.JPG"),
     body: [
       "Modern reels push for fast cuts every half second, but the clips people actually replay are the ones that give them room to breathe.",
       "When I edit travel or road footage, I try to treat every clip like a moving still—letting the wind, engine hum, or passing clouds carry the pace instead of rushing to the next transition.",
@@ -215,7 +218,7 @@ const journal = [
     title: "Traveling light, noticing more",
     summary: "Why carrying less gear leads to more honest frames.",
     color: "note-yellow",
-    image: "/images/IMG_8504.JPG",
+    image: asset("/images/IMG_8504.JPG"),
     body: [
       "When you pack every lens and rig, you spend half the trip managing equipment instead of watching how the light changes across a valley.",
       "Riding out with a minimal kit forces you to move your feet, wait for the clouds, and stay present with the place in front of you.",
@@ -743,11 +746,11 @@ export default function Home() {
         setLightbox((current) =>
           current
             ? {
-                ...current,
-                index:
-                  (current.index - 1 + current.items.length) %
-                  current.items.length,
-              }
+              ...current,
+              index:
+                (current.index - 1 + current.items.length) %
+                current.items.length,
+            }
             : null,
         );
       }
@@ -773,7 +776,7 @@ export default function Home() {
         entries.forEach((entry) => {
           const video = entry.target as HTMLVideoElement;
           if (entry.isIntersecting) {
-            video.play().catch(() => {});
+            video.play().catch(() => { });
           } else {
             video.pause();
           }
@@ -943,7 +946,7 @@ export default function Home() {
     if (reducedMotion) return;
     const video = event.currentTarget.querySelector<HTMLVideoElement>("video");
     if (video) {
-      video.play().catch(() => {});
+      video.play().catch(() => { });
     }
   }
 
@@ -1041,7 +1044,7 @@ export default function Home() {
             />
           ) : (
             <Image
-              src="/images/IMG_8250.JPG"
+              src={asset("/images/IMG_8250.JPG")}
               alt=""
               fill
               priority
@@ -1126,7 +1129,7 @@ export default function Home() {
       <section className="philosophy section-pad" id="about" data-scroll-story="philosophy">
         <div className="philosophy-bg" aria-hidden="true">
           <Image
-            src="/images/IMG_8250.JPG"
+            src={asset("/images/IMG_8250.JPG")}
             alt=""
             fill
             sizes="100vw"
@@ -1161,7 +1164,7 @@ export default function Home() {
           <figure className="intro-portrait" data-scroll-zoom>
             <div className="intro-portrait-visual">
               <Image
-                src="/images/42BE51DC-CEAE-406E-8879-3EF8E90BC2AD.JPG"
+                src={asset("/images/42BE51DC-CEAE-406E-8879-3EF8E90BC2AD.JPG")}
                 alt="Resting beside the river beneath red blossoms"
                 fill
                 sizes="(max-width: 760px) 92vw, 38vw"
@@ -1196,7 +1199,7 @@ export default function Home() {
                 className="approach-bg-video"
                 data-ambient-video
                 src={APPROACH_VIDEO}
-                poster="/images/IMG_2494.JPG"
+                poster={asset("/images/IMG_2494.JPG")}
                 autoPlay
                 muted
                 loop
@@ -1205,7 +1208,7 @@ export default function Home() {
               />
             ) : (
               <Image
-                src="/images/IMG_2494.JPG"
+                src={asset("/images/IMG_2494.JPG")}
                 alt=""
                 fill
                 sizes="100vw"
@@ -1236,7 +1239,7 @@ export default function Home() {
                 className="process-bg-video"
                 data-ambient-video
                 src={PROCESS_VIDEO}
-                poster="/images/IMG_6567.JPG"
+                poster={asset("/images/IMG_6567.JPG")}
                 autoPlay
                 muted
                 loop
@@ -1245,7 +1248,7 @@ export default function Home() {
               />
             ) : (
               <Image
-                src="/images/IMG_6567.JPG"
+                src={asset("/images/IMG_6567.JPG")}
                 alt=""
                 fill
                 sizes="100vw"
@@ -1369,68 +1372,68 @@ export default function Home() {
           {filteredProjects.map((project, index) => {
             const originalIndex = projects.findIndex((p) => p.name === project.name);
             return (
-            <article
-              className={`project-card ${index % 2 === 1 ? "project-offset" : ""}`}
-              data-reveal="up"
-              key={project.name}
-              style={{ transitionDelay: `${(index % 2) * 100}ms` }}
-            >
-              <button
-                type="button"
-                className={`project-art ${project.art} ${project.frame} ${project.video ? "has-video" : ""}`}
-                data-scroll-zoom
-                data-cursor={project.video ? "PLAY" : "VIEW"}
-                onClick={() => setActiveDrawer({ type: "project", index: originalIndex })}
-                onMouseEnter={project.video ? handleCardVideoEnter : undefined}
-                onMouseLeave={project.video ? handleCardVideoLeave : undefined}
-                aria-label={`Open ${project.name} ${project.video ? "reel and gallery" : "photo gallery"}`}
+              <article
+                className={`project-card ${index % 2 === 1 ? "project-offset" : ""}`}
+                data-reveal="up"
+                key={project.name}
+                style={{ transitionDelay: `${(index % 2) * 100}ms` }}
               >
-                <div className="project-visual">
-                  <Image
-                    src={project.image}
-                    alt={`${project.name} — ${project.title}`}
-                    fill
-                    sizes="(max-width: 760px) 92vw, 52vw"
-                    style={{ objectPosition: project.objectPosition }}
-                  />
-                  {project.video && !reducedMotion && (
-                    <video
-                      className="project-hover-video"
-                      src={project.video}
-                      muted
-                      loop
-                      playsInline
-                      preload="metadata"
+                <button
+                  type="button"
+                  className={`project-art ${project.art} ${project.frame} ${project.video ? "has-video" : ""}`}
+                  data-scroll-zoom
+                  data-cursor={project.video ? "PLAY" : "VIEW"}
+                  onClick={() => setActiveDrawer({ type: "project", index: originalIndex })}
+                  onMouseEnter={project.video ? handleCardVideoEnter : undefined}
+                  onMouseLeave={project.video ? handleCardVideoLeave : undefined}
+                  aria-label={`Open ${project.name} ${project.video ? "reel and gallery" : "photo gallery"}`}
+                >
+                  <div className="project-visual">
+                    <Image
+                      src={project.image}
+                      alt={`${project.name} — ${project.title}`}
+                      fill
+                      sizes="(max-width: 760px) 92vw, 52vw"
+                      style={{ objectPosition: project.objectPosition }}
                     />
+                    {project.video && !reducedMotion && (
+                      <video
+                        className="project-hover-video"
+                        src={project.video}
+                        muted
+                        loop
+                        playsInline
+                        preload="metadata"
+                      />
+                    )}
+                  </div>
+                  {project.video && (
+                    <span className="media-badge">
+                      <PlayBadgeIcon size={10} /> Motion Reel
+                    </span>
                   )}
-                </div>
-                {project.video && (
-                  <span className="media-badge">
-                    <PlayBadgeIcon size={10} /> Motion Reel
+                  <span className="project-art-caption">
+                    Series&nbsp; / &nbsp;{String(originalIndex + 1).padStart(2, "0")} · {project.gallery.length} Frames
                   </span>
-                )}
-                <span className="project-art-caption">
-                  Series&nbsp; / &nbsp;{String(originalIndex + 1).padStart(2, "0")} · {project.gallery.length} Frames
-                </span>
-                <span className="project-art-hint">
-                  {project.video ? "Watch reel" : "View series"} <ArrowUpRight size={12} />
-                </span>
-              </button>
-              <div className="project-info">
-                <div>
-                  <h3>{project.name}</h3>
-                  <p>{project.title}</p>
-                  <button
-                    type="button"
-                    className="case-study-trigger"
-                    onClick={() => setActiveDrawer({ type: "project", index: originalIndex })}
-                  >
-                    {project.video ? "Watch reel & frames" : "Open photo series"} <ArrowUpRight />
-                  </button>
+                  <span className="project-art-hint">
+                    {project.video ? "Watch reel" : "View series"} <ArrowUpRight size={12} />
+                  </span>
+                </button>
+                <div className="project-info">
+                  <div>
+                    <h3>{project.name}</h3>
+                    <p>{project.title}</p>
+                    <button
+                      type="button"
+                      className="case-study-trigger"
+                      onClick={() => setActiveDrawer({ type: "project", index: originalIndex })}
+                    >
+                      {project.video ? "Watch reel & frames" : "Open photo series"} <ArrowUpRight />
+                    </button>
+                  </div>
+                  <span className="project-discipline">{project.discipline}</span>
                 </div>
-                <span className="project-discipline">{project.discipline}</span>
-              </div>
-            </article>
+              </article>
             );
           })}
         </div>
@@ -1704,7 +1707,7 @@ export default function Home() {
       >
         <div className="footer-bg" aria-hidden="true">
           <Image
-            src="/images/IMG_6648.jpg"
+            src={asset("/images/IMG_6648.jpg")}
             alt=""
             fill
             sizes="100vw"
@@ -2012,9 +2015,9 @@ export default function Home() {
                   setLightbox((cur) =>
                     cur
                       ? {
-                          ...cur,
-                          index: (cur.index - 1 + cur.items.length) % cur.items.length,
-                        }
+                        ...cur,
+                        index: (cur.index - 1 + cur.items.length) % cur.items.length,
+                      }
                       : null,
                   )
                 }

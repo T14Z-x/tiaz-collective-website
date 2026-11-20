@@ -5,3 +5,11 @@ out/
 .vercel/
 .env*
 !.env.example
+
+# Unused raw / placeholder media kept locally only
+public/images/20230913_153358.MP4
+public/images/20241015_081532.mov
+public/images/*.HEIC
+public/images/IMG_2780 2.JPG
+public/images/project-*.jpg
+public/images/portrait-*.jpg
